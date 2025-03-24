@@ -1,5 +1,8 @@
 Modal.elements = [];
 function Modal(options) {
+    if(!options.content && !options.teamplateId) {
+        console.error('khong co content va templateId')
+    }
     // Lay thuoc tinh, phuong thuc cua options
     this.opt = Object.assign({
         // teamplateId, 
